@@ -1,20 +1,33 @@
-//stayalive
-// const express = require('express')
-// const app = express();
-// const port = 3000
-
-// app.get('/', (req, res) => res.send('Yo boi!!'))
-
-// app.listen(port, () =>
-// console.log(`Your app is listening a http://localhost:${port}`)
-// );
 //discord.js
 const { token } = require('./config.json')
 const fs = require("node:fs");
 const path = require("node:path");
-const { Client, Collection, GatewayIntentBits } = require("discord.js");
+const { Client, Collection, GatewayIntentBits, ActivityType, Partials } = require("discord.js");
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  presence: {
+    status: 'online',
+    afk: true,
+    activities: [{
+        name: 'her dms',
+        type: ActivityType.Competing,
+    }],
+  },
+	intents: [
+		GatewayIntentBits.Guilds, 
+		GatewayIntentBits.GuildMessages, 
+		GatewayIntentBits.GuildPresences, 
+		GatewayIntentBits.GuildMessageReactions, 
+		GatewayIntentBits.DirectMessages,
+		GatewayIntentBits.MessageContent
+	], 
+	partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember, Partials.Reaction] 
+});
+
+
+
+
+
 
 //command handler
 client.commands = new Collection();
