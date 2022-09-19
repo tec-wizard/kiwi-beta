@@ -3,6 +3,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("coinflip")
     .setDescription("Flip a coin!"),
+    category: 'Fun',
   async execute(interaction) {
     const flip = ["heads", "tails", "heads", "tails", "heads", "tails"];
     let response = flip[Math.floor(Math.random() * flip.length)];

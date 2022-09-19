@@ -5,6 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder()
     .setName('bored')
     .setDescription('im bored AF'),
+    category: 'Fun',
     async execute(interaction) {
         let data = await axios.get(`https://nekos.best/api/v2/bored`);
         // console.log(data.data.results[0].url);

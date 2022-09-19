@@ -9,6 +9,7 @@ module.exports = {
     option.setName('user')
     .setDescription('Mention the person you wanna yeeeet')
     .setRequired(true)),
+    category: 'Fun',
     async execute(interaction) {
         let user = interaction.options.getUser('user');
         if(!user) return interaction.reply('Mention someone to yeet!');

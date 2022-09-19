@@ -9,8 +9,8 @@ const client = new Client({
     status: 'online',
     afk: true,
     activities: [{
-        name: 'her dms',
-        type: ActivityType.Competing,
+        name: '/help',
+        type: ActivityType.Listening,
     }],
   },
 	intents: [
@@ -26,6 +26,8 @@ const client = new Client({
 
 //command handler
 client.commands = new Collection();
+// client.categories = new Collection();
+
 const commandsPath = path.join(__dirname, "commands");
 const commandFiles = fs
   .readdirSync(commandsPath)
@@ -35,6 +37,7 @@ for (const file of commandFiles) {
   const filePath = path.join(commandsPath, file);
   const command = require(filePath);
   client.commands.set(command.data.name, command);
+  // client.categories.set(command.category, command.data.name);
 }
 
 //event handler

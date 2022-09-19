@@ -5,6 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder()
     .setName('dance')
     .setDescription('Show them moves :D'),
+    category: 'Fun',
     async execute(interaction) {
         let data = await axios.get(`https://nekos.best/api/v2/dance`);
         

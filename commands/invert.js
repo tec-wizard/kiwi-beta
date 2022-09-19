@@ -8,6 +8,7 @@ module.exports = {
     .addUserOption((option) => 
     option.setName('user')
     .setDescription('Mention someone to invert the colors :)')),
+    category: 'Image',
     async execute(interaction) {
         let user = interaction.options.getUser('user');
         if(!user) user = interaction.user;

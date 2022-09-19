@@ -9,6 +9,7 @@ module.exports = {
     option.setName('target')
     .setDescription('Who do you wanna slap?')
     .setRequired(true)),
+    category: 'Fun',
     async execute(interaction) {
         let target = interaction.options.getUser('target');
         if(!target) return interaction.reply('No target specified :/');

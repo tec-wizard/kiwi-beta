@@ -8,6 +8,7 @@ module.exports = {
     option.setName('user')
     .setDescription('Who is worse than hitler?')
     .setRequired(true)),
+    category: 'Image',
     async execute(interaction) {
         let user = interaction.options.getUser('user');
         if(!user) return interaction.reply('No user mentioned :/')

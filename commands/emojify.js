@@ -51,6 +51,7 @@ module.exports = {
         .setDescription("Give something to emojify")
         .setRequired(true)
     ),
+    category: 'Fun',
   async execute(interaction) {
     let text = await interaction.options.getString("text");
     if (!text) return interaction.reply("No text provided :/");

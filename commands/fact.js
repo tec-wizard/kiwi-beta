@@ -4,6 +4,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("fact")
     .setDescription("Gives you a random fact"),
+    category: 'Fun',
   async execute(interaction) {
     data = await axios.get(
       "https://uselessfacts.jsph.pl/random.json?language=en"

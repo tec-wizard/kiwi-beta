@@ -8,6 +8,7 @@ module.exports = {
     .addUserOption((option) =>
     option.setName('user')
     .setDescription('Who do you wanna throw in the trash can? :O')),
+    category: 'Image',
     async execute(interaction) {
         let user = interaction.options.getUser('user');
         if(!user) user = interaction.user;

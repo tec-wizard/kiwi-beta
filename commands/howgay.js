@@ -7,6 +7,7 @@ module.exports = {
     .addUserOption((option) =>
     option.setName('user')
     .setDescription('Mention someone to check :P')),
+    category: 'Fun',
     async execute(interaction) {
         let user = await interaction.options.getUser('user');
         if(!user) user = interaction.user;

@@ -9,6 +9,7 @@ module.exports = {
     option.setName('text')
     .setDescription('What do you wanna tweet?')
     .setRequired(true)),
+    category: 'Image',
     async execute(interaction) {
         let text = interaction.options.getString('text');
         if(!text) return interaction.reply('No text provided :/')

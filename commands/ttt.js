@@ -8,6 +8,7 @@ module.exports = {
     option.setName('user')
     .setDescription('Who do you wanna play with?')
     .setRequired(true)),
+    category: 'Games',
     async execute(interaction) {
         let user = interaction.options.getUser('user');
         new TicTacToe({

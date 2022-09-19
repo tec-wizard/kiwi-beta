@@ -4,6 +4,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("advice")
     .setDescription("Free advice, take it or leave it!"),
+  category: 'Fun',
   async execute(interaction) {
     data = await axios.get("https://api.adviceslip.com/advice");
     const advice = data.data.slip;

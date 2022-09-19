@@ -4,6 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
     .setName('slots')
     .setDescription('slots machine! high stakes high reward(jk dont gamble)'),
+    category: 'Games',
     async execute(interaction) {
         new Slots({
             message: interaction,

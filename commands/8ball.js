@@ -10,6 +10,7 @@ module.exports = {
         .setDescription("whats your question?")
         .setRequired(true)
     ),
+  category: 'Fun',
   async execute(interaction) {
     const question = interaction.options.getString("question");
     if (!question) {

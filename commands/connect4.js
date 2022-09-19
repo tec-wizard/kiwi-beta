@@ -8,6 +8,7 @@ module.exports = {
     option.setName('opponent')
     .setDescription('Who do you wanna play with?')
     .setRequired(true)),
+    category: 'Games',
     async execute(interaction) {
         let user = interaction.options.getUser('opponent');
         if(!user) return interaction.reply('Mention someone! :/');

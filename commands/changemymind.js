@@ -10,6 +10,7 @@ module.exports = {
         .setDescription('Whats the text gonna be? (keep it short tho)')
         .setRequired(true)
     ),
+    category: 'Image',
   async execute(interaction) {
     let text = await interaction.options.getString('text');
     if (!text) return interaction.reply('No text provided :/')

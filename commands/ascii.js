@@ -8,6 +8,7 @@ module.exports = {
     option.setName('text')
     .setDescription('Gimme some text to convert!')
     .setRequired(true)),
+    category: 'Fun',
     async execute(interaction) {
         let text = interaction.options.getString('text');
         if(!text) return interaction.reply('No text provided! :/');

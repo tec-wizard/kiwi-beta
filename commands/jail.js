@@ -8,6 +8,7 @@ module.exports = {
     option.setName('target')
     .setDescription('Who should be jailed?')
     .setRequired(true)),
+    category: 'Image',
     async execute(interaction) {
         let user = interaction.options.getUser('target');
         if(!user) return interaction.reply('No user mentioned :/');

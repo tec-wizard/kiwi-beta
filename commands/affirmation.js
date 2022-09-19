@@ -4,6 +4,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName('affirmation')
     .setDescription('Positive affirmations do help!'),
+  category: 'Fun',
   async execute(interaction) {
     let data = await axios.get(`https://www.affirmations.dev/`)
     // console.log(data)

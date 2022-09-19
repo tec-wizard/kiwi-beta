@@ -8,6 +8,7 @@ module.exports = {
     option.setName('user')
     .setDescription('who do u wanna play with?')
     .setRequired(true)),
+    category: 'Games',
     async execute(interaction) {
         new RockPaperScissors({
             message: interaction,

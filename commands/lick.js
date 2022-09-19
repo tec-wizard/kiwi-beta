@@ -10,6 +10,7 @@ module.exports = {
     option.setName('user')
     .setDescription('Who do you wanna lick? :P')
     .setRequired(true)),
+    category: 'Fun',
     async execute(interaction) {
         let user = interaction.options.getUser('user');
         if(!user) return interaction.reply('No user provided :/')

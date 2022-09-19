@@ -19,6 +19,7 @@
     "discord-gamecord": "^2.1.0",
     "discord.js": "^14.3.0",
     "figlet": "^1.5.2",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "pokecord": "^1.0.1"
   }
 }

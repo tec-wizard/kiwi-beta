@@ -5,6 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder()
     .setName('blush')
     .setDescription('awwwww you are blushing'),
+    category: 'Fun',
     async execute(interaction) {
         let data = await axios.get(`https://purrbot.site/api/img/sfw/blush/gif`);
 

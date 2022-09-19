@@ -11,6 +11,7 @@ module.exports = {
         .setDescription("Enter your text! (p.s. doesnt support emojis!!!)")
         .setRequired(true)
     ),
+    category: 'Fun',
   async execute(interaction) {
     let text = interaction.options.getString("text");
     if (!text) return interaction.reply("No text given :/");
