@@ -111,7 +111,7 @@ module.exports = {
             });
             } else {
                 await i.deferUpdate()
-                
+                // await i.setDisabled(true)
                 let msg = await interaction.followUp('Incorrect! :x: \nYou have '+chances+' chances remaining!')
                 await wait(3000);
                 await msg.delete();
