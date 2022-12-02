@@ -6,7 +6,7 @@ module.exports = {
     .setName('test')
     .setDescription('nothing to say really......'),
     async execute(interaction) {
-        let data = await Fun.randomuser();
-        // await interaction.reply(data)
+        let data = await Fun.randomuser()
+        await interaction.reply(data);
     }
 }
